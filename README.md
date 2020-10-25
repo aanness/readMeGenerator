@@ -1,6 +1,10 @@
 
   
-  ##GitHubInfo 
+  Homework8
+  
+  [GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)
+
+  ## GitHubInfo 
   aanness
 
   ## Email
@@ -9,21 +13,21 @@
   ## Title
   Homework8
 
-  ##Description
-  README Generator
+  ## Description
+  Generate README
 
-  ##License
-  GPL
+  ## License
+  MIT
 
-  ##Install
+  ## Install
   npm i
 
-  ##Tests
+  ## Tests
   npm i
 
-  ##Information
-  undefined
+  ## Information
+  nothing
 
-  ##Contributors
-  Go ahead!
-  
+  ## Contributors
+  nothing
+

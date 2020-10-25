@@ -1,13 +1,34 @@
-// function passing in license as arg
-// validate lisence exists
-// return ![Github license]
+// function for license badge
+function renderLicenseBadge(license){
+  if(license !== "None"){
+    return '[GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)';
+  }
+  return ''
+}
 
+// function for creating license link
+
+// function for rendering license section 
+function renderLicenseSection(license){
+  if (license !== "None"){
+    return (
+      'license ##'
+    )
+  }
+  else {
+    return ''
+  }
+}
 
 // function to generate markdown for README
 function generateMarkdown(answers) {
   return `
   
-  ##GitHubInfo 
+  ${answers.title}
+  
+  ${renderLicenseBadge(answers.license)}
+
+  ## GitHubInfo 
   ${answers.github}
 
   ## Email
@@ -16,22 +37,22 @@ function generateMarkdown(answers) {
   ## Title
   ${answers.title}
 
-  ##Description
+  ## Description
   ${answers.description}
 
-  ##License
+  ## License
   ${answers.license}
 
-  ##Install
+  ## Install
   ${answers.install}
 
-  ##Tests
+  ## Tests
   ${answers.tests}
 
-  ##Information
-  ${answers.info}
+  ## Information
+  ${answers.information}
 
-  ##Contributors
+  ## Contributors
   ${answers.contributors}
 
 `;
