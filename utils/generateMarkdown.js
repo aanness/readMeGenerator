@@ -12,7 +12,7 @@ function renderLicenseBadge(license){
 function renderLicenseSection(license){
   if (license !== "None"){
     return (
-      'license ##'
+      '## license '
     )
   }
   else {
