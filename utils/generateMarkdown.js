@@ -4,11 +4,33 @@
 
 
 // function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  ${data.github}
-  ${data.projectName}
+function generateMarkdown(answers, gitHubInfo) {
+  return `# ${answers.title}
+
+  ## Description
+  ${answers.description}
+
+  ## Table of Contents
+  ${answers.contents}
+
+  ##Installation
+  ${answers.installation}
+
+  ##Usage
+  ${answers.usage}
+
+  ##License
+  ${answers.license}
+
+  ##Contributors
+  ${answers.contributors}
+
+  ##Test
+  ${answers.test}
+
 `;
 }
 
 module.exports = generateMarkdown;
+
+// writeMarkdown
