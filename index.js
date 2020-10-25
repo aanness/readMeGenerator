@@ -2,7 +2,6 @@ const inquirer = require("inquirer")
 const fs = require("fs")
 // path is built in but you have to require it
 const path = require("path") 
-const generate = require('./utils/generateMarkdown.js');
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
@@ -10,43 +9,49 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 const questions = [
     {
         type:"input",
+        name:"github",
+        message:"What is your github username?"
+    },
+    {
+        type:"input",
+        name:"email",
+        message:"What is your email address?",
+    },
+    {
+        type:"input",
         name:"title",
-        message:"What is your project title?"
+        message:"What is your project name?"
     },
     {
         type:"input",
         name:"description",
-        message:"What is your project description?",
+        message:"Write a short description of your project?",
     },
     {
-        type:"input",
-        name:"contents",
-        message:"What are your table of contents?"
-    },
-    {
-        type:"input",
-        name:"installation",
-        message:"What are the installation instructions?",
-    },
-    {
-        type:"input",
-        name:"usage",
-        message:"What is the project usage?",
-    },
-    {
-        type:"input",
+        type:"list",
         name:"license",
-        message:"Please provide the project licence or your badge link?",
+        message:"What type of product license do you have?",
+        choices: ["MIT", "APACHE 2.0", "GPL"]
+    },
+    {
+        type:"input",
+        name:"install",
+        message:"What command should be run to install dependencies?",
     }, 
     {
         type:"input",
-        name:"contributors",
-        message:"Who are the contributing parties?",
+        name:"tests",
+        message:"What command should be run to run tests?",
     },
     {
         type:"input",
-        name:"test",
-        message:"Tests?",
+        name:"information",
+        message:"What does the user need to know about using this repo?",
+    },
+    {
+        type:"input",
+        name:"contributors",
+        message:"What does the user need to know about contributing to this repo?",
     },
 ];
 
@@ -60,7 +65,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(answers => {
-        console.log("Generating README");
+        console.log("Generating README...");
         writeToFile('README.md', generateMarkdown({...answers}));
     })
 }

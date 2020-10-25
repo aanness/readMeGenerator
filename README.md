@@ -1,23 +1,29 @@
-# kjbsckjbsdc
 
-  ## Description
-  ahsghvdbc
+  
+  ##GitHubInfo 
+  aanness
 
-  ## Table of Contents
-  bwdcjbwdkc
+  ## Email
+  ashleyaanness@gmail.com
 
-  ##Installation
-  bsdcjbkjwdc
+  ## Title
+  Homework8
 
-  ##Usage
-  bwdcjbwdc
+  ##Description
+  README Generator
 
   ##License
-  bwdcibwdc
+  GPL
+
+  ##Install
+  npm i
+
+  ##Tests
+  npm i
+
+  ##Information
+  undefined
 
   ##Contributors
-  bwdcbwdc
-
-  ##Test
-  bsdcbkjsdc
-
+  Go ahead!
+  
